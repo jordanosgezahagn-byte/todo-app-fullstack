@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProTask - Modern To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header>
+            <div class="logo">
+                <i class="fa-solid fa-check-double"></i>
+                <h2>ProTask</h2>
+            </div>
+            <p id="date-display">Today's Tasks</p>
+        </header>
+
+        <!-- Input Box Section -->
+        <div class="task-input-card">
+            <div class="input-row">
+                <input type="text" id="taskInput" placeholder="What needs to be done?">
+                <input type="date" id="dueDateInput">
+            </div>
+            <button id="addTaskBtn"><i class="fa-solid fa-plus"></i> Add Task</button>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="filter-tabs">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="active">Active</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+
+        <!-- Task List Container -->
+        <div class="tasks-container">
+            <ul id="taskList">
+                <!-- Dynamic tasks will load here -->
+            </ul>
+        </div>
+
+        <!-- Footer Stats -->
+        <footer>
+            <span id="taskCount">0 tasks left</span>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
